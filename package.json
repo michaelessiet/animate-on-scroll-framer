@@ -1,6 +1,6 @@
 {
   "name": "animate-on-scroll-framer",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "A scroll animation library. This simplifies the process of animating jsx elements on scroll intersection.",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
@@ -10,8 +10,8 @@
   ],
   "scripts": {
     "build": "rollup -c",
-    "watch": "rollup -cw",
-    "prepack": "npm build"
+    "prepack": "npm run build",
+    "watch": "rollup -cw"
   },
   "repository": {
     "type": "git",
@@ -44,13 +44,18 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^2.75.7",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-typescript2": "^0.32.1",
     "typescript": "^4.7.4"
   },
   "dependencies": {
     "autoprefixer": "^10.4.7",
-    "framer-motion": "^6.3.11",
+    "framer-motion": "6.3.11",
     "react-intersection-observer": "^9.3.3"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

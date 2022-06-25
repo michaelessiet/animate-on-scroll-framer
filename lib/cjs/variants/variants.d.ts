@@ -13,3 +13,4 @@ export declare const variants: {
     scaleInX: Variants;
     scaleInY: Variants;
 };
+//# sourceMappingURL=variants.d.ts.map

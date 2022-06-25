@@ -29,3 +29,4 @@ export declare type animaitonsListType = {
     scaleInX: JSX.Element;
     scaleInY: JSX.Element;
 };
+//# sourceMappingURL=types.d.ts.map
