@@ -1,12 +1,16 @@
 export type animationComponentProps = {
   children: React.ReactNode;
+  spring:boolean
   duration: number | null;
   delay: number | null;
+  animateEachChild:boolean
 };
 
 export interface AnimateOnScrollProps {
   children: React.ReactNode;
   animation: animationType;
+  spring?:boolean
+  animateEachChild?:boolean
   duration?: number | null;
   delay?: number | null;
 };
