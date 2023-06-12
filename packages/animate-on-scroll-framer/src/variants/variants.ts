@@ -1,4 +1,4 @@
-import { Target, Variants } from "framer-motion/types/types";
+import { Target, Variants } from "framer-motion";
 
 export const variants = {
   fadeIn: <Variants>{
