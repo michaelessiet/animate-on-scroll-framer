@@ -8,7 +8,7 @@ on:
     types: [created]
 
 jobs:
-  build-and-publish:
+  build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -18,15 +18,25 @@ jobs:
       - uses: pnpm/action-setup@v2
         with:
           version: 8
-      - uses: actions/setup-node@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          registry-url: https://registry.npmjs.org/
           cache: 'pnpm'
-        env: 
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
       - name: Install packages
         run: pnpm install
       - name: Build
         run: pnpm run build
+
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org/
       - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
