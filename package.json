@@ -10,7 +10,8 @@
 	],
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "pnpm --filter animate-on-scroll-framer build"
+		"build": "pnpm --filter animate-on-scroll-framer build",
+    "dev": "pnpm --filter './apps/animate-on-scroll-framer-site' dev"
 	},
 	"repository": {
 		"type": "git",
