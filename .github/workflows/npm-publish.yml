@@ -8,7 +8,7 @@ on:
     types: [created]
 
 jobs:
-  build:
+  build-and-publish:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -27,16 +27,7 @@ jobs:
         run: pnpm install
       - name: Build
         run: pnpm run build
-
-  publish-npm:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          registry-url: https://registry.npmjs.org/
-      - run: npm publish
-        env:
+      - name: Publish
+        run: npm publish
+        env: 
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
