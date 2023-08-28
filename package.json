@@ -1,13 +1,35 @@
 {
-  "name": "animate-on-scroll-framer",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "pnpm --filter animate-on-scroll-framer build"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+	"name": "animate-on-scroll-framer",
+	"version": "1.2.0",
+	"description": "A scroll animation library. This simplifies the process of animating jsx elements on scroll intersection.",
+	"main": "./lib/cjs/index.js",
+	"module": "./lib/esm/index.js",
+	"types": "./lib/esm/index.d.ts",
+	"files": [
+		"/lib"
+	],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "pnpm --filter animate-on-scroll-framer build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/michaelessiet/animate-on-scroll-framer.git"
+	},
+	"keywords": [
+		"animation",
+		"scroll",
+		"animate",
+		"reactAnimationOnScroll",
+		"react",
+		"framer",
+		"react",
+		"animation"
+	],
+	"author": "Michael Essiet",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/michaelessiet/animate-on-scroll-framer/issues"
+	},
+	"homepage": "https://github.com/michaelessiet/animate-on-scroll-framer#readme"
 }
