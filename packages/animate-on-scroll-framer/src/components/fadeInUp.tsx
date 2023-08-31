@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 import { animationComponentProps } from "../types/types";
 import { variants } from "../variants/variants";
 
-const FadeInUp = ({ children, duration, delay, spring }: animationComponentProps) => {
+const FadeInUp = ({ children, duration, delay, spring, className }: animationComponentProps) => {
   const animate = useAnimation();
   const { ref, inView } = useInView({ triggerOnce: false });
   const defaultdelay = delay === null ? 0.5 : delay;
@@ -32,6 +32,7 @@ const FadeInUp = ({ children, duration, delay, spring }: animationComponentProps
       }}
       animate={animate}
       variants={variants.fadeInUp}
+      className={className}
     >
       {children}
     </motion.div>

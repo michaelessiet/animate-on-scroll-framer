@@ -6,7 +6,7 @@ import { animationComponentProps } from "../types/types";
 import React from "react";
 
 const FlipIn = (
-  { children, duration, delay, spring, animateEachChild }: animationComponentProps,
+  { children, duration, delay, spring, animateEachChild, className }: animationComponentProps,
 ) => {
   const animate = useAnimation();
   const { ref, inView } = useInView({ triggerOnce: false });
@@ -31,6 +31,7 @@ const FlipIn = (
         <div ref={ref} style={{ perspective: "600px", overflowX:'clip',overflowY:'visible' }}>
           <motion.div
             initial={"initial"}
+            className={className}
             transition={{
               delay: defaultdelay,
               duration: defaultduration,
@@ -60,6 +61,7 @@ const FlipIn = (
             }}
             animate={animate}
             variants={variants.flipIn}
+            className={className}
           >
             {children}
           </motion.div>

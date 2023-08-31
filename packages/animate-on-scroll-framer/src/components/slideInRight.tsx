@@ -9,6 +9,7 @@ const SlideInRight = ({
   duration,
   delay,
   spring,
+  className
 }: animationComponentProps) => {
   const animate = useAnimation();
   const { ref, inView } = useInView({ triggerOnce: false });
@@ -37,6 +38,7 @@ const SlideInRight = ({
         }}
         animate={animate}
         variants={variants.slideInRight}
+        className={className}
       >
         {children}
       </motion.div>
