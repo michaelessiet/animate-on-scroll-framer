@@ -9,6 +9,7 @@ const SlideInUp = ({
   duration,
   delay,
   spring,
+  className
 }: animationComponentProps) => {
   const animate = useAnimation();
   const { ref, inView } = useInView({ triggerOnce: false });
@@ -37,6 +38,7 @@ const SlideInUp = ({
         }}
         animate={animate}
         variants={variants.slideInUp}
+        className={className}
       >
         {children}
       </motion.div>

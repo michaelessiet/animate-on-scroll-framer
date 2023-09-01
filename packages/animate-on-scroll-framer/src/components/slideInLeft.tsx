@@ -9,6 +9,7 @@ const SlideInLeft = ({
   duration,
   delay,
   spring,
+  className
 }: animationComponentProps) => {
   const animate = useAnimation();
   const { ref, inView } = useInView({ triggerOnce: false });
@@ -37,6 +38,7 @@ const SlideInLeft = ({
         }}
         animate={animate}
         variants={variants.slideInLeft}
+        className={className}
       >
         {children}
       </motion.div>

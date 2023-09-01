@@ -9,6 +9,7 @@ const FadeIn = ({
   duration,
   delay,
   spring,
+  className
 }: animationComponentProps) => {
   const animate = useAnimation();
   const { ref, inView } = useInView({ triggerOnce: false });
@@ -37,6 +38,7 @@ const FadeIn = ({
       }}
       animate={animate}
       variants={variants.fadeIn}
+      className={className}
     >
       {children}
     </motion.div>

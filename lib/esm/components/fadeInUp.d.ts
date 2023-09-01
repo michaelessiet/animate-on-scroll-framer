@@ -1,0 +1,5 @@
+/// <reference types="react" />
+import { animationComponentProps } from "../types/types";
+declare const FadeInUp: ({ children, duration, delay, spring, className }: animationComponentProps) => JSX.Element;
+export default FadeInUp;
+//# sourceMappingURL=fadeInUp.d.ts.map

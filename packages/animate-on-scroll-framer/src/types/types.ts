@@ -3,7 +3,9 @@ export type animationComponentProps = {
   spring:boolean
   duration: number | null;
   delay: number | null;
+  /** This is only applicable when using the flipIn animation */
   animateEachChild:boolean
+  className?: string
 };
 
 export interface AnimateOnScrollProps {
@@ -13,6 +15,7 @@ export interface AnimateOnScrollProps {
   animateEachChild?:boolean
   duration?: number | null;
   delay?: number | null;
+  className?: string
 };
 
 export type animationType =
