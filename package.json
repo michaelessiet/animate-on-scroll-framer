@@ -1,6 +1,6 @@
 {
 	"name": "animate-on-scroll-framer",
-	"version": "1.2.6",
+	"version": "1.3.0",
 	"description": "A scroll animation library. This simplifies the process of animating jsx elements on scroll intersection.",
 	"main": "./lib/cjs/index.js",
 	"module": "./lib/esm/index.js",
